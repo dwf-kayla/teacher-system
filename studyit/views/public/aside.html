@@ -1,0 +1,110 @@
+<div class="aside">
+    <!-- 个人资料 -->
+    <div class="profile" id='user-info'>
+        <!-- 头像 -->
+        <!-- <div class="avatar img-circle">
+            <img src="/views/static/uploads/avatar.jpg">
+        </div>
+        <h4>布头儿</h4> -->
+    </div>   
+    <!-- 导航菜单 -->
+    <div class="navs">
+        <ul class="list-unstyled">
+            <li>
+                <a href="/dashboard/index" class="active">
+                    <i class="fa fa-dashboard"></i>
+                    仪表盘
+                </a>
+            </li>
+            <!-- <li>
+                <a href="/user/list">
+                    <i class="fa fa-bell"></i>
+                    用户管理
+                </a>
+            </li> -->
+            <li>
+                <a href="/teacher/list">
+                    <i class="fa fa-mortar-board"></i>
+                    讲师管理
+                </a>
+            </li>
+            <li>
+                <a href="/category/category">
+                  <i class="fa fa-indent"></i>
+                  分类管理
+                </a>
+              </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="fa fa-th"></i>
+                    课程管理
+                    <i class="arrow fa fa-angle-right"></i>
+                </a>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="/course/add">
+                             课程添加
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/course/list">
+                            课程列表
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="/category/category">
+                            课程分类
+                        </a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="/course/topic">
+                            课程专题
+                        </a>
+                    </li> -->
+                </ul>
+            </li>
+            <!-- <li>
+                <a href="/advert/list">
+                    <i class="fa fa-bell"></i>
+                    广告管理
+                </a>
+            </li> -->
+            <!-- <li>
+                <a href="javascript:;">
+                    <i class="fa fa-cog"></i>
+                    系统设置
+                    <i class="arrow fa fa-angle-right"></i>
+                </a>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="javascript:;">
+                            网站设置
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                             权限管理
+                        </a>
+                    </li>
+                </ul>
+            </li> -->
+        </ul>
+    </div>
+</div>
+
+<script type="text/template" id="profile-tpl">
+        <div class="avatar img-circle">
+            {{if tc_avatar}}
+            <img src="{{tc_avatar}}">
+            {{else}}
+            <img src="/views/static/uploads/avatar.jpg">
+            {{/if}}
+        </div>
+        <h4>{{tc_name}}</h4> 
+</script>
+
+
+<!-- 制作一个遮罩层，让图片显示在中间，水平垂直居中 -->
+<div id="mask" style="display:none;text-align:center; z-index: 999;position:fixed; width:100%; height: 100%; background-color: rgba(0,0,0,.3);">
+    <img style="width:150px;display:inline-block;transform: translateY(200%)" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508045968758&di=b8e441216dbd00f1d3ce61050488ee56&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01af1f568cd3796ac725bb5c8fdd8e.gif" alt="">
+</div>
